@@ -7,27 +7,27 @@
             double valorTotal = 0;
             if (servico == "sedex")
             {
-                var entrega = new Correios();
-                valorTotal = entrega.CalcularRemessa(peso);
+                var correios = new Correios();
+                valorTotal = correios.CalcularRemessa(peso);
             } else if (servico == "jadlog")
             {
-                var entrega = new Jadlog();
-                valorTotal = entrega.CalcularFreteJadLog(peso);
+                var jadlog = new Jadlog();
+                valorTotal = jadlog.CalcularFreteJadLog(peso);
             }
             else if (servico == "dhl")
             {
-                var entrega = new Dhl();
-                valorTotal = entrega.PriceCalculator(peso);
+                var dhl = new Dhl();
+                valorTotal = dhl.PriceCalculator(peso);
             }
             else if (servico == "fedex")
             {
-                var entrega = new Fedex();
-                valorTotal = entrega.ShippingPrice(peso);
+                var fedex = new Fedex();
+                valorTotal = fedex.ShippingPrice(peso);
             }
             else if (servico == "mercadolivre")
             {
-                var entrega = new MercadoLivre();
-                valorTotal = entrega.CalculateDelivery(peso);
+                var mercadoLivre = new MercadoLivre();
+                valorTotal = mercadoLivre.CalculateDelivery(peso);
             }
 
             return valorTotal;

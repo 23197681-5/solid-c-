@@ -1,6 +1,7 @@
 ﻿namespace WebApplication1.ComOpenClosed
 {
-    public class Dhl:IFreteServico
+    //Concret Strategy
+    public class Dhl :IFreteServico
     {
         public double Calcular(double peso)
         {

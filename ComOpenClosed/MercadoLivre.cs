@@ -1,6 +1,7 @@
 ﻿namespace WebApplication1.ComOpenClosed
 {
-    public class MercadoLivre:IFreteServico
+    //Concret Strategy
+    public class MercadoLivre : IFreteServico
     {
         public double Calcular(double peso)
         {

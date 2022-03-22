@@ -7,20 +7,23 @@ namespace WebApplication1.Controllers
     [Route("[controller]/[action]")]
     public class TestController : ControllerBase
     {
-        
+
         [HttpGet]
         public double SemOpenClosed()
         {
-            var valor = new SemOpenClosed.Frete().Calcular("sedex",2.5);
+            var frete = new SemOpenClosed.Frete();
+            var valor = frete.Calcular("sedex", 2.5);
 
             return valor;
         }
 
         [HttpGet]
-        public double ComOpenClosed()
+        public double FreteAmazon()
         {
-            var correios = new Correios();
-            var valor = new ComOpenClosed.Frete(correios).Calcular(2.5);
+            var amazon = new Amazon();
+            var mercadoLivre = new MercadoLivre();
+            var frete = new Frete(amazon);
+            var valor = frete.Calcular(2.5);
 
             return valor;
         }

@@ -1,6 +1,7 @@
 ﻿namespace WebApplication1.ComOpenClosed
 {
-    public class Fedex :IFreteServico
+    //Concret Strategy
+    public class Fedex : IFreteServico
     {
         public double Calcular(double peso)
         {

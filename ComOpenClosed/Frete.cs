@@ -1,5 +1,6 @@
 ﻿namespace WebApplication1.ComOpenClosed
 {
+    //Context
     public class Frete
     {
         private IFreteServico _freteServico;

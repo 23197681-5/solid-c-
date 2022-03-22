@@ -1,6 +1,4 @@
-﻿using WebApplication1.SemOpenClosed;
-
-namespace WebApplication1.SemOpenClosed
+﻿namespace WebApplication1.SemOpenClosed
 {
     public class Frete
     {

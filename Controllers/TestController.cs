@@ -1,6 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.ComOpenClosed;
 
+using WebApplication1.SemOpenClosed;
+using Amazon = WebApplication1.SemOpenClosed.Amazon;
+using Frete = WebApplication1.ComOpenClosed.Frete;
+using MercadoLivre = WebApplication1.ComOpenClosed.MercadoLivre;
+
 namespace WebApplication1.Controllers
 {
     [ApiController]
@@ -11,8 +16,10 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public double SemOpenClosed()
         {
-            var frete = new SemOpenClosed.Frete();
-            var valor = frete.Calcular("sedex", 2.5);
+                
+            var amazon = new Amazon();
+            var frete = new SemOpenClosed.Frete(amazon);
+            var valor = frete.Calcular( 2.5);
 
             return valor;
         }

@@ -1,8 +1,8 @@
 ﻿namespace WebApplication1.SemOpenClosed
 {
-    public class Dhl
+    public class Dhl : IFreteServico
     {
-        internal double PriceCalculator(double peso)
+        public double Calcular(double peso)
         {
             return .8 * peso * 2;
         }

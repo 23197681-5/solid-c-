@@ -1,9 +1,9 @@
 ﻿namespace WebApplication1.SemOpenClosed
 {
-    public class Correios
+    public class Correios : IFreteServico
     {
         
-        internal double CalcularRemessa(double peso)
+        public double Calcular(double peso)
         {
             return peso * 2;
         }

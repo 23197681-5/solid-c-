@@ -1,11 +1,12 @@
 ﻿namespace WebApplication1.SemOpenClosed
 {
 
-    public class Amazon
+    public class Amazon : IFreteServico
     {
-        internal double Calculate(double peso)
+        public double Calcular(double peso)
         {
             return peso * .9;
         }
+        
     }
 }

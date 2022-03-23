@@ -1,8 +1,8 @@
 ﻿namespace WebApplication1.SemOpenClosed
 {
-    public class Fedex
+    public class Fedex : IFreteServico
     {
-        internal double ShippingPrice(double peso)
+        public double Calcular(double peso)
         {
             return peso * 1.8 + 3;
         }
